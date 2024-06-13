@@ -238,13 +238,13 @@ const parseDateLine = (line: string): Pick<SoundingReport, 'date' | 'type'> => {
 		throw new Error('Failed to parse type from meta line');
 	}
 
-	const year = lineParts[4] ? Number.parseInt(lineParts[4]) : null;
+	const year = lineParts[4] ? Number.parseInt(lineParts[4]) ?? null : null;
 	const month = lineParts[3] ? getMonth(lineParts[3]) : null;
-	const day = lineParts[2] ? Number.parseInt(lineParts[2]) : null;
-	const hour = lineParts[1] ? Number.parseInt(lineParts[1]) : null;
+	const day = lineParts[2] ? Number.parseInt(lineParts[2]) ?? null : null;
+	const hour = lineParts[1] ? Number.parseInt(lineParts[1]) ?? null : null;
 
-	if (!(year && month && day && hour)) {
-		throw new Error('Failed to parse date from meta line');
+	if (!(year !== null && month !== null && day !== null && hour !== null)) {
+		throw new Error('Failed to parse date from meta line.');
 	}
 
 	let date: string;

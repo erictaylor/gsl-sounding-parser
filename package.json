@@ -1,7 +1,7 @@
 {
 	"name": "gsl-sounding-parser",
 	"description": "A parser for NOAA GSL sounding reports.",
-	"version": "0.1.0",
+	"version": "0.1.1",
 	"license": "MIT",
 	"packageManager": "bun@1.1.13",
 	"author": "Eric Taylor <eric@daxos.com> (https://github.com/erictaylor)",
