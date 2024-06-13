@@ -1,0 +1,45 @@
+{
+	"name": "gsl-sounding-parser",
+	"description": "A parser for NOAA GSL sounding reports.",
+	"version": "0.1.0",
+	"license": "MIT",
+	"packageManager": "bun@1.1.13",
+	"author": "Eric Taylor <eric@daxos.com> (https://github.com/erictaylor)",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/erictaylor/gsl-sounding-parser.git"
+	},
+	"homepage": "https://github.com/erictaylor/gsl-sounding-parser#readme",
+	"bugs": "https://github.com/erictaylor/gsl-sounding-parser/issues",
+	"keywords": ["RAP", "sounding", "parser", "GSL", "GSD", "NOAA"],
+	"type": "module",
+	"exports": {
+		".": {
+			"types": "./dist/mod.d.ts",
+			"import": "./dist/mod.js",
+			"default": "./dist/mod.js"
+		}
+	},
+	"module": "dist/mod.js",
+	"main": "dist/mod.js",
+	"types": "dist/mod.d.ts",
+	"files": ["dist"],
+	"scripts": {
+		"build": "bun run build:mod && bun run build:types",
+		"build:mod": "bun build ./src/mod.ts --minify --outdir=dist --sourcemap=external",
+		"build:types": "tsc ./src/mod.ts --declaration --emitDeclarationOnly --declarationDir dist --skipLibCheck",
+		"check": "biome check",
+		"check:ci": "biome ci",
+		"format": "biome format --write ./",
+		"prepublishOnly": "bun run build",
+		"test": "bun test"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^1.8.1",
+		"@types/bun": "latest"
+	},
+	"peerDependencies": {
+		"typescript": "^5.0.0"
+	},
+	"sideEffects": false
+}

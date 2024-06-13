@@ -1,0 +1,66 @@
+{
+	"$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+	"javascript": {
+		"formatter": {
+			"quoteStyle": "single"
+		}
+	},
+	"linter": {
+		"enabled": true,
+		"rules": {
+			"recommended": true,
+			"a11y": {
+				"recommended": true
+			},
+			"complexity": {
+				"recommended": true,
+				"useSimplifiedLogicExpression": "error"
+			},
+			"correctness": {
+				"recommended": true,
+				"noUnusedImports": "error",
+				"noUnusedVariables": "error"
+			},
+			"nursery": {
+				"noDuplicateJsonKeys": "error"
+			},
+			"performance": {
+				"recommended": true,
+				"noBarrelFile": "error"
+			},
+			"security": {
+				"recommended": true
+			},
+			"style": {
+				"recommended": true,
+				"noNegationElse": "error",
+				"useBlockStatements": "error",
+				"useExponentiationOperator": "error",
+				"useFragmentSyntax": "error",
+				"useSingleCaseStatement": "error"
+			},
+			"suspicious": {
+				"recommended": true
+			}
+		}
+	},
+	"organizeImports": {
+		"enabled": true
+	},
+	"files": {
+		"ignore": [
+			"**/node_modules/**",
+			"**/dist/**",
+			"**/coverage/**",
+			"**/out/**",
+			"**/__generated__/**"
+		],
+		"ignoreUnknown": true
+	},
+	"vcs": {
+		"enabled": false,
+		"clientKind": "git",
+		"defaultBranch": "main",
+		"useIgnoreFile": true
+	}
+}

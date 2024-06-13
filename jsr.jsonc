@@ -1,0 +1,10 @@
+{
+	"$schema": "https://jsr.io/schema/config-file.v1.json",
+	"name": "@erictaylor/gsl-sounding-parser",
+	"version": "0.1.0",
+	"exports": "./src/mod.ts",
+	"publish": {
+		"include": ["README.md", "LICENSE.md", "./src/**/*"],
+		"exclude": ["**/__tests__/**"]
+	}
+}
