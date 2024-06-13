@@ -5,6 +5,6 @@
 	"exports": "./src/mod.ts",
 	"publish": {
 		"include": ["README.md", "LICENSE.md", "./src/**/*"],
-		"exclude": ["**/__tests__/**"]
+		"exclude": ["**/__tests__/**", "**/__fixtures__/**", "**/__snapshots__/**"]
 	}
 }
