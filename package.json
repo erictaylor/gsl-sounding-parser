@@ -3,7 +3,7 @@
 	"description": "A parser for NOAA GSL sounding reports.",
 	"version": "0.1.1",
 	"license": "MIT",
-	"packageManager": "bun@1.1.13",
+	"packageManager": "bun@1.1.15",
 	"author": "Eric Taylor <eric@daxos.com> (https://github.com/erictaylor)",
 	"repository": {
 		"type": "git",
@@ -35,11 +35,12 @@
 		"test": "bun test"
 	},
 	"devDependencies": {
-		"@biomejs/biome": "^1.8.1",
+		"@biomejs/biome": "^1.8.2",
 		"@types/bun": "latest"
 	},
 	"peerDependencies": {
 		"typescript": "^5.0.0"
 	},
-	"sideEffects": false
+	"sideEffects": false,
+	"trustedDependencies": ["@biomejs/biome"]
 }
